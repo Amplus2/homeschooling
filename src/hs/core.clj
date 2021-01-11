@@ -2,6 +2,7 @@
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "I don't understand clj a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (def f (clojure.java.io/file "."))
+  (println (file-seq f)))
