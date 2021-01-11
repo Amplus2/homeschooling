@@ -1,12 +1,9 @@
 (ns hs.core 
   (:gen-class))
 
-(defn get-files
-  [path]
-  (file-seq (clojure.java.io/file path)))
+(require '(hs [db :as db]))
 
 (defn -main
   "I don't understand clojure a whole lot ... yet."
   [& args]
-  (println (get-files "./src")))
-
+  (println (hs.db/path->db "./src")))
